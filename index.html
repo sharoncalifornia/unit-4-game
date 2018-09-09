@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+  <title>simple crystal game</title>
+
+  <style type="text/css">
+
+ 
+  </style>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="#">Crytal Collector</a>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" id="reset-game" href="#">Reset Game <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="portfolio.html">Select Another Game</a>
+            </li>
+            <!--li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li-->
+        </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+    </div>
+</nav>  
+
+<div class="container">
+
+    <div class="jumbotron" style="background-color:gray; color:white">
+        <h1 class="display-4 text-center">Crystal Collector</h1>
+        <p class="lead">You will be given a random number at the start of the game.There are 10 crytals below. By clicking on a cryatal you will add a specific amount of points to your total score. You win the game by matching your total score to random number. You lose the game if your total scores goes above the random number. The value of each crytal is hidden from you until you click on it. Each time when the game starts, the game will change the value of each crsytal.</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-9">
+            <h1>Number of Games Played: <span id="number-game"></span></h1>
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-light" id="playagain">Play Again</button>
+        </div>
+    </div>
+
+
+
+    <div class="row my-panel">
+        <div class="col-lg-3">
+            <div class="panel">
+                <div class="panel-heading">
+                    <h1 class="panel-title text-center">Target Score</h1>
+                </div>
+                <div class="panel-body">
+                    <h1 class="text-center" id="target-score">0</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-log-3">
+            <div class="panel">
+                <div class="panel-heading">
+                    <h1 class="panel-title text-center">Your Score</h1>
+                </div>
+                <div class="panel-body">
+                    <h1 class="text-center" id="your-score">0</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="panel">
+                <div class="panel-heading">
+                    <h1 class="panel-title text-center">Win Count</h1>
+                </div>
+                <div class="panel-body">
+                    <h1 class="text-center" id="win-count">0</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-log-3">
+            <div class="panel">
+                <div class="panel-heading">
+                    <h1 class="panel-title text-center">Loss Count</h1>
+                </div>
+                <div class="panel-body">
+                    <h1 class="text-center" id="loss-count">0</h1>
+                </div>
+            </div>
+        </div>
+     </div>
+
+    <div class=row>
+        <div class = "col-lg-12">
+            <div class="panel panel-primary" sytle="background-color:green; color:white"></div>
+            <div class="panel-heading"><h1 class="panel-title"></h1>  </div>
+            <div class="panel-body">  </div>
+        </div>
+     
+    </div>
+</div>   
+
+    <br>
+    <br>
+
+<!--div class="row">
+    <div class="col-sm-1"><img class="crystal-image" id="ruby" width="100" height="100" src="./assets/images/image_1.png" alt="crystal"></div>
+    <div class="col-sm-1"><img class="crystal-image" id="amethyst" width="100" height="100" src="./assets/images/image_2.png" alt="crystal"></div>
+    <div class="col-sm-1"><img class="crystal-image" id="aquamarine" width="100" height="100" src="./assets/images/image_3.png" alt="crystal"></div>
+    <div class="col-sm-1"><img class="crystal-image" id="peridot" width="100" height="100" src="./assets/images/image_4.png" alt="cystal"></div>
+    <div class="col-sm-1"><img class="crystal-image" id="garnet" width="100" height="100" src="./assets/images/image_5.png" alt="crystal"></div>
+    <div class="col-sm-1"><img class="crystal-image" id="emerald" width="100" height="100" src="./assets/images/image_6.png" alt="crystal"></div>
+    <div class="col-sm-1"><img class="crystal-image" id="opal" width="100" height="100" src="./assets/images/image_7.png" alt="crystal"></div>
+    <div class="col-sm-1"><img class="crystal-image" id="topez" width="100" height="100" src="./assets/images/image_8.png" alt="crystal"></div>
+    <div class="col-sm-1"><img class="crystal-image" id="turqoise" width="100" height="100" src="./assets/images/image_9.png" alt="crystal"></div>
+    <div class="col-sm-1"><img class="crystal-image" id="tanzanite" width="100" height="100" src="./assets/images/image_10.png" alt="crystal"></div>
+</div--> 
+ 
+    <table class="table" >
+        <tbody>
+        <tr>
+            <td><img class="crystal-image" id="ruby" width="100" height="100" src="./assets/images/image_1.png" alt="crystal"></td>
+            <td><img class="crystal-image" id="amethyst" width="100" height="100" src="./assets/images/image_2.png" alt="crystal"></td>
+            <td><img class="crystal-image" id="aquamarine" width="100" height="100" src="./assets/images/image_3.png" alt="crystal"></td>
+            <td><img class="crystal-image" id="peridot" width="100" height="100" src="./assets/images/image_4.png" alt="cystal"></td>
+            <td><img class="crystal-image" id="garnet" width="100" height="100" src="./assets/images/image_5.png" alt="crystal"></td>      
+            <td><img class="crystal-image" id="emerald" width="100" height="100" src="./assets/images/image_6.png" alt="crystal"></td>
+            <td><img class="crystal-image" id="opal" width="100" height="100" src="./assets/images/image_7.png" alt="crystal"></td>
+            <td><img class="crystal-image" id="topez" width="100" height="100" src="./assets/images/image_8.png" alt="crystal"></td>
+            <td><img class="crystal-image" id="turqoise" width="100" height="100" src="./assets/images/image_9.png" alt="crystal"></td>
+            <td><img class="crystal-image" id="tanzanite" width="100" height="100" src="./assets/images/image_10.png" alt="crystal"></td>
+        </tr>
+    </tbody>
+    </table>
+
+  <!-- JAVASCRIPT  -->
+  <!-- ========================================= -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script type="text/javascript" src="./assets/javascript/crystal.js">
+
+
+
+  </script>
+
+  <br>
+  <br>
+
+<footer>      
+        <p>Copyright &copy;</p>
+</footer>
+
+</body>
+
+</html>

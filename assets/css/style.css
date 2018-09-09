@@ -1,0 +1,28 @@
+footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.crystal-image {
+    width: 100px;
+    height: 100px;
+}
+
+/* .my-panel{
+    background-color:grey;
+} */
+
+.panel-title
+{
+    background-color: #1B676B;
+    
+}
+
+body{
+    background-image: url("background_image.png");
+
+    background-color: #cccccc;
+
+}
